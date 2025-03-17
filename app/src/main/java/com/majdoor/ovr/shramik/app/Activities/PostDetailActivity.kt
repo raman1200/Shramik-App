@@ -191,18 +191,18 @@ class PostDetailActivity : AppCompatActivity() {
         binding.jobSalary.text = data.salary
         binding.date.text = data.date
 
-        if(userData.Image!=null){
-            Glide.with(this).load(userData.Image).placeholder(R.drawable.user).into(binding.profileImage)
+        if(userData.image!=null){
+            Glide.with(this).load(userData.image).placeholder(R.drawable.user).into(binding.profileImage)
         }
-        val name:String = if(userData.Name.equals("null")){
+        val name:String = if(userData.name.equals("null")){
             "Unknown"
         } else{
-            userData.Name.toString()
+            userData.name.toString()
         }
-        val location:String = if(userData.District.equals(null)){
+        val location:String = if(userData.district.equals(null)){
             "--"
         }else{
-            userData.District.toString()
+            userData.district.toString()
         }
         binding.managerName.text = name
         binding.location.text = location

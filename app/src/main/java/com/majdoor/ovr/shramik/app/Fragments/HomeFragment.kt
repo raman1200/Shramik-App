@@ -27,7 +27,6 @@ import com.majdoor.ovr.shramik.app.Adapters.PostAdapter
 import com.majdoor.ovr.shramik.app.Adapters.WorkerPostAdapter
 import com.majdoor.ovr.shramik.app.DataClasses.Constants
 import com.majdoor.ovr.shramik.app.DataClasses.PostData
-import com.majdoor.ovr.shramik.app.DataClasses.UserData
 import com.majdoor.ovr.shramik.app.DataClasses.WorkersData
 import com.majdoor.ovr.shramik.app.R
 import com.majdoor.ovr.shramik.app.databinding.FragmentHomeBinding

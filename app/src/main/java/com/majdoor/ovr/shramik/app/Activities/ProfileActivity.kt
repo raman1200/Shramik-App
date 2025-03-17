@@ -7,6 +7,7 @@ import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.majdoor.ovr.shramik.app.DataClasses.Constants
 import com.majdoor.ovr.shramik.app.R
+import com.majdoor.ovr.shramik.app.auth.presentation.SignInActivity
 import com.majdoor.ovr.shramik.app.databinding.ActivityProfileBinding
 import java.util.*
 

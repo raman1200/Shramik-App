@@ -1,134 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
-
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/submit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/firstPinView" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="Phone Authentication"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cl"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        android:layout_height="wrap_content">
 
-        <com.hbb20.CountryCodePicker
-            android:id="@+id/countryCodePicker"
+        <ProgressBar
+            android:id="@+id/progress_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="7dp"
-            android:paddingBottom="7dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/stroke_bg"
-            app:layout_constraintBottom_toBottomOf="@id/text_input_layout"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/submit"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/text_input_layout" />
+            app:layout_constraintTop_toTopOf="@+id/pinView" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_input_layout"
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:startIconDrawable="@drawable/call"
-            app:counterEnabled="true"
-
-            app:startIconTint="@color/black"
-            android:layout_marginStart="5dp"
-            app:counterMaxLength="10"
-            android:backgroundTint="@color/white"
-            style="@style/TextInputLayoutAppearance"
-            android:hint="Phone Number"
-            app:counterTextColor="@color/dark_grey"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Phone Authentication"
+            android:textColor="@color/black"
+            android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/countryCodePicker"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/phone"
-                android:layout_width="match_parent"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/countryCodePicker"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textCursorDrawable="@null"
-                android:textColor="@color/black"
-                android:maxLength="10"
-                android:inputType="number"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/stroke_bg"
+                app:layout_constraintBottom_toBottomOf="@id/text_input_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_input_layout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:startIconDrawable="@drawable/call"
+                app:counterEnabled="true"
+
+                app:startIconTint="@color/black"
+                android:layout_marginStart="5dp"
+                app:counterMaxLength="10"
+                android:backgroundTint="@color/white"
+                style="@style/TextInputLayoutAppearance"
+                android:hint="Phone Number"
+                app:counterTextColor="@color/dark_grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/countryCodePicker"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionDone"
+                    android:maxLength="10"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.chaos.view.PinView
+            android:id="@+id/pinView"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:cursorVisible="true"
+            android:hint="123456"
+            android:inputType="number"
+            android:textSize="18sp"
+            app:lineColor="@color/black"
+            android:textColorHighlight="@color/blue"
+            android:textColor="@color/blue"
+            app:cursorColor="@color/blue"
+            android:textColorLink="@color/blue"
+            android:filterTouchesWhenObscured="true"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:cursorWidth="4dp"
+            app:hideLineWhenFilled="false"
+            app:itemCount="6"
+            app:itemHeight="48dp"
+            app:itemRadius="4dp"
+            app:itemSpacing="10dp"
+            app:itemWidth="48dp"
+            app:layout_constraintEnd_toEndOf="@id/cl"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/cl"
+            app:layout_constraintTop_toBottomOf="@+id/cl"
+            app:lineWidth="2dp"
+            app:viewType="rectangle" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="@color/grey"
+            android:text="Continue"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/pinView"
+            app:layout_constraintStart_toStartOf="@+id/pinView"
+            app:layout_constraintTop_toBottomOf="@+id/pinView" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <com.chaos.view.PinView
-        android:id="@+id/firstPinView"
-        style="@style/PinWidget.PinView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:cursorVisible="true"
-        android:hint="123456"
-        android:inputType="number"
-        android:textSize="18sp"
-        app:lineColor="@color/black"
-        android:textColorHighlight="@color/blue"
-        android:textColor="@color/blue"
-        app:cursorColor="@color/blue"
-        android:textColorLink="@color/blue"
-        android:filterTouchesWhenObscured="true"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:cursorWidth="4dp"
-        app:hideLineWhenFilled="false"
-        app:itemCount="6"
-        app:itemHeight="48dp"
-        app:itemRadius="4dp"
-        app:itemSpacing="10dp"
-        app:itemWidth="48dp"
-        app:layout_constraintEnd_toEndOf="@id/cl"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/cl"
-        app:layout_constraintTop_toBottomOf="@+id/cl"
-        app:lineWidth="2dp"
-        app:viewType="rectangle" />
-
-    <Button
-        android:id="@+id/submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="@color/grey"
-        android:text="Continue"
-        android:layout_marginBottom="100dp"
-        app:layout_goneMarginTop="70dp"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/firstPinView"
-        app:layout_constraintStart_toStartOf="@+id/firstPinView"
-        app:layout_constraintTop_toBottomOf="@+id/firstPinView" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

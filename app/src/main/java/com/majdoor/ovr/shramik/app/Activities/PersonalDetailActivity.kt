@@ -1,7 +1,6 @@
 package com.majdoor.ovr.shramik.app.Activities
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -20,7 +19,6 @@ import com.android.volley.toolbox.Volley
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import com.majdoor.ovr.shramik.app.DataClasses.UserData
 import com.majdoor.ovr.shramik.app.R
 import com.majdoor.ovr.shramik.app.databinding.ActivityPersonalDetailBinding
 
@@ -356,7 +354,7 @@ class PersonalDetailActivity : AppCompatActivity() {
     private fun closeKeyBoard() {
         val view = this.currentFocus
         if (view != null) {
-            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
             imm.hideSoftInputFromWindow(view.windowToken, 0)
         }
     }
